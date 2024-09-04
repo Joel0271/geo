@@ -16,19 +16,19 @@
     function watchyoursix(six) {
         const lat = six.coords.latitude;
         const lon = six.coords.longitude;
-        document.getElementById("location").innerText = `Latitude: ${lat}, Longitude: ${lon}`;
+        document.getElementById("location").innerText = `Pull Rate/Pull Amount ${lat} ${lon}`;
     }
 
     function showError(error) {
         switch (error.code) {
             case error.PERMISSION_DENIED:
-                document.getElementById("location").innerText = "User denied the request for Geolocation nya.";
+                document.getElementById("location").innerText = "User denied the request nya.";
                 break;
             case error.POSITION_UNAVAILABLE:
-                document.getElementById("location").innerText = "Location information is unavailable nya.";
+                document.getElementById("location").innerText = "information is unavailable nya.";
                 break;
             case error.TIMEOUT:
-                document.getElementById("location").innerText = "The request to get user location timed out nya.";
+                document.getElementById("location").innerText = "The request to get pull data timed out nya.";
                 break;
             case error.UNKNOWN_ERROR:
                 document.getElementById("location").innerText = "An unknown error occurred nya.";
