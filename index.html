@@ -3,35 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Geolocation Example</title>
+  <title>EnSekai</title>
   <script>
     function GTNya() {
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition, showError);
+            navigator.geolocation.getCurrentPosition(watchyoursix, showError);
         } else {
-            document.getElementById("location").innerText = "Geolocation is not supported by this browser.";
+            document.getElementById("location").innerText = "EnSekai is not supported by this browser nya.";
         }
     }
 
-    function showPosition(position) {
-        const lat = position.coords.latitude;
-        const lon = position.coords.longitude;
+    function watchyoursix(six) {
+        const lat = six.coords.latitude;
+        const lon = six.coords.longitude;
         document.getElementById("location").innerText = `Latitude: ${lat}, Longitude: ${lon}`;
     }
 
     function showError(error) {
         switch (error.code) {
             case error.PERMISSION_DENIED:
-                document.getElementById("location").innerText = "User denied the request for Geolocation.";
+                document.getElementById("location").innerText = "User denied the request for Geolocation nya.";
                 break;
             case error.POSITION_UNAVAILABLE:
-                document.getElementById("location").innerText = "Location information is unavailable.";
+                document.getElementById("location").innerText = "Location information is unavailable nya.";
                 break;
             case error.TIMEOUT:
-                document.getElementById("location").innerText = "The request to get user location timed out.";
+                document.getElementById("location").innerText = "The request to get user location timed out nya.";
                 break;
             case error.UNKNOWN_ERROR:
-                document.getElementById("location").innerText = "An unknown error occurred.";
+                document.getElementById("location").innerText = "An unknown error occurred nya.";
                 break;
         }
     }
